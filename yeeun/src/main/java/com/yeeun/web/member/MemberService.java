@@ -15,5 +15,7 @@ public interface MemberService {
 
 	public boolean remove(String userid);
 
+	public List<Member> list();
+
 	
 }

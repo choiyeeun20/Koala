@@ -1,8 +1,13 @@
 package com.yeeun.web.member;
 
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.Map.Entry;
 
 import org.springframework.stereotype.Service;
 
@@ -33,7 +38,7 @@ public class MemberServiceImpl implements MemberService{
 	@Override
 	public Member detail(String userid) {
 		Member t = (Member)map.get(userid);
-		return (Member) map.get(userid);
+		return t;
 	}
 
 	@Override
@@ -50,6 +55,23 @@ public class MemberServiceImpl implements MemberService{
 	@Override
 	public void add(Member member) {
 		map.put(member.getUserid(), member);
+	}
+	@Override
+	public List<Member> list() {
+		List<Member> list = new ArrayList<>();
+		@SuppressWarnings("rawtypes")
+		Set set = map.entrySet();
+		@SuppressWarnings("rawtypes")
+		Iterator it = set.iterator();
+		while(it.hasNext()) {
+			@SuppressWarnings("unchecked")
+			Map.Entry<String, Member> e = (Entry<String,Member>) it.next();
+			list.add(e.getValue());
+		}
+		for(int i=0; i< list.size(); i++) {
+			System.out.println(list.get(i));
+		}
+		return list;
 	}
 
 }
