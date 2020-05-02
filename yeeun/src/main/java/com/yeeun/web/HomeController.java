@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
 	@GetMapping("/") // 도메인뒤에 보이는것 .
 	public String hello() {
-		return "index2.html";
+		return "index.html";
 	}
 }
