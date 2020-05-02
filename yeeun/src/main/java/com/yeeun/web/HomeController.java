@@ -7,16 +7,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 @SpringBootConfiguration
 @Controller
 public class HomeController {
-	@GetMapping("/") // 도메인뒤에 보이는것 .
+	@GetMapping("/") 
 	public String hello() {
-		return "index";
+		return "index"; //뒤에 html 생략함
 	}
-	@GetMapping("/home") // 도메인뒤에 보이는것 .
+	@GetMapping("/home") 
 	public String home() {
 		return "user";
 	}
-	@GetMapping("/admin") // 도메인뒤에 보이는것 .
+	@GetMapping("/admin") 
 	public String admin() {
 		return "admin";
-	}
+}
 }
