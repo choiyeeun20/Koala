@@ -9,6 +9,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
 	@GetMapping("/") // 도메인뒤에 보이는것 .
 	public String hello() {
-		return "index.html";
+		return "index";
+	}
+	@GetMapping("/home") // 도메인뒤에 보이는것 .
+	public String home() {
+		return "user";
+	}
+	@GetMapping("/admin") // 도메인뒤에 보이는것 .
+	public String admin() {
+		return "admin";
 	}
 }

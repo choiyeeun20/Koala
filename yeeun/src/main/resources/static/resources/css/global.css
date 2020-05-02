@@ -1,0 +1,15 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	min-height: 100%;
+}
+.border_black {border: 1px solid black;}
+.center {
+	margin: 0 auto;
+	text-align: center;
+}
+.width_full {
+	width: '100%';
+	height: '100%'
+}
