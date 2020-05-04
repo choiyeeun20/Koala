@@ -1,13 +1,156 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>관리자 페이지</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/resources/css/global.css" />
+    <script type="text/javascript" src="/resources/js/user.js"></script>
+    <script type="text/javascript" src="/resources/js/admin.js"></script>
+    <style>
+ #navi {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        #navi li {
+            float: left;
+        }
+        #navi li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 20px 100px;
+            text-decoration: none;
+        }
+        /* Change the link color to #111 (black) on hover */
+        #navi li a:hover {
+            background-color: #111;
+        }
+        #navi.active {
+            background-color: #4CAF50;
+        }
+        #navi li {
+            border-right: 1px solid #bbb;
+        }
+        #navi li:last-child {
+            border-right: none;
+        }
+        #navi {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        #userData {
+            border: 1px solid black;
+            text-align: center;
+            margin: 0 auto;
+        }
+        #userData tr {
+            height: 30px;
+            border: 1px solid black;
+        }
+        #userData tr td {
+            width: 150px;
+            border: 1px solid black;
+        }
+        #side_menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  border: 1px solid #555;
+}
+
+#side_menu li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+#side_menu li {
+  text-align: center;
+  border-bottom: 1px solid #555;
+}
+
+#side_menu li:last-child {
+  border-bottom: none;
+}
+
+#side_menu li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#side_menu li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+    </style>
 </head>
 <body>
-Admin 진입
-<a href="/home">홈으로 가기</a>
+<ul id="navi">
+  <li><a class="active" href="#home">관리자</a></li>
+  <li><a href="#news">회원관리</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+    <table id="kcdc" style="margin: 100px auto; height: 70%">
+        <tr>
+            <td style="border: 3px solid black; width: 20%;margin-top: 200px">
+            	<div >
+            		<h3 id="total_count" style="margin-bottom: 50px">총회원수 : </h3>
+            		<div style="margin-bottom: 50px">이름 조회 : <input type="text" /></div>
+            		
+            		<ul id="side_menu">
+						  <li><a class="active" href="#home">사용자 목록</a></li>
+						  <li><a href="#news">관리자 목록</a></li>
+						  <li><a href="#contact">음원 차트</a></li>
+						  <li><a href="#about">앨범 차트</a></li>
+						</ul>
+            	
+            	</div>
+            </td>
+            <td colspan="3" style="border: 3px solid black; width: 80%;margin-top: 100px">
+            	<div id="content" style="width: 1200px; height: 500px;margin: 0 auto">
+            		<table id="userData">
+                        <tr>
+                            <td>
+                                <a id="number">No.</a>
+                            </td>
+                            <td>
+                                <a id="userid">아이디</a>
+                            </td>
+                             <td>
+                                <a id="name">이름</a>
+                            </td>
+                           <td>
+                                <a id="ssn">주민번호</a>
+                            </td>
+                            <td>
+                                <a id="email">이메일</a>
+                            </td>
+                            <td>
+                                <a id="phoneNumber">전화번호</a>
+                            </td>
+                            <td>
+                                <a id="registerDate">등록일자</a>
+                            </td>
+                        </tr>
+                        
+                    </table>
+            	</div>
+            </td>
+        </tr>
+    </table>
+ <script>
+ admin.init()
+     
+ </script>
 </body>
+
 </html>

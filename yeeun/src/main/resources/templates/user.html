@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
-    <title>사용자 페이지</title>
+    <title>Insert title here</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="/resources/css/global.css" />
-    <script type="text/javascript" src="/resources/js/user.js"></script>
-    <script type="text/javascript" src="/resources/js/admin.js"></script>
+	<link rel="stylesheet" href="/resources/css/global.css"/>
+	<script type = "text/javascript" src="/resources/js/user.js"></script>
+	<script type = "text/javascript" src="/resources/js/admin.js"></script>
 </head>
 <body>
     <table id="kcdc">
@@ -15,14 +16,14 @@
                 <img src="http://www.cdc.go.kr/cdc/img/main/h1_logo.png">
             </td>
             <td colspan="2">
-                <input id="search" style="width:500px;height:50px;float:left;margin-left:50px" type="text">
-                <input id="search_button" style="width:150px;height:50px;float:left;margin-left:50px;background-color: #80003e; color: white" type="button" value="검색"> <br>
+                <input id="search" type="text"><input id="search-button" type="button" value="검색"> <br> 
             </td>
             <td>
-                <a id="login_a" style="cursor:pointer;text-decoration: underline">회원가입</a>
-                <a id="join_a" style="cursor:pointer;text-decoration: underline">로그인</a>
-                <a id="register_a" style="cursor:pointer;text-decoration: underline">관리자 등록</a>
-                <a id="access_a" style="cursor:pointer;text-decoration: underline">관리자 접속</a>
+                <a id="login_a" style="cursor::pointer;text-decoration:underline">회원가입</a>
+                <a id="join_a" style="cursor::pointer;text-decoration:underline">로그인</a>
+                <a id="register_a" style="cursor::pointer;text-decoration:underline">관리자 등록</a>
+                <a id="aceess_a" style="cursor::pointer;text-decoration:underline">관리자 접속</a>
+               
                 
             </td>
         </tr>
@@ -30,9 +31,11 @@
             <td colspan="4">
             </td>
         </tr>
-        <tr>
-            <td id="content" colspan="4">
-                <img src="http://www.cdc.go.kr/cdc/img/main/visual_default_main_01.jpg">
+      <tr>
+            <td colspan="4">
+            	<div id="content" style="width: 1200px; height: 500px;margin: 0 auto">
+            		<img src="http://www.cdc.go.kr/cdc/img/main/visual_default_main_01.jpg">
+            	</div>
             </td>
         </tr>
         <tr id="menu_2">
@@ -54,10 +57,9 @@
             </td>
         </tr>
     </table>
- <script>
- 	user.init()
-     
- </script>
+    <script>
+	user.init()
+    </script>
 </body>
 
 </html>
