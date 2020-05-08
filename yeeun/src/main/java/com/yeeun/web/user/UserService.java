@@ -9,7 +9,7 @@ public interface UserService {
 
 	public Messenger register(User user);
 	
-	public Messenger findOne(String userid);
+	public User findOne(String userid);
 
 	public List<User> findAll();
 

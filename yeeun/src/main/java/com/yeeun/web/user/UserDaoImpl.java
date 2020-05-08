@@ -58,13 +58,16 @@ public class UserDaoImpl implements UserDao{
 	}
 
 	@Override
-	public Messenger selectOne(String userid) {
-		try {
-			
-		}catch(Exception e){
-			
+	public User selectOne(String userid) {
+		List<User> list = selectAll() ;
+		User findUser = null;
+		for(User u : list) {
+			if(userid.equals(u.getUserid())) {
+				findUser = u;
+				break;
+			}
 		}
-		return null;
+		return findUser;
 	}
 
 	@Override

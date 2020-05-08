@@ -12,7 +12,7 @@ public interface UserDao {
 
 	public List<User> selectAll();
 
-	public Messenger selectOne(String userid);
+	public User selectOne(String userid);
 
 	public void update(User user);
 

@@ -1,5 +1,5 @@
 "use strict"
-const adminVue = {
+var adminVue = {
 		join : ()=>{
 			return 	` <table id="kcdc">
 	        <tr>

@@ -2,6 +2,7 @@ package com.yeeun.web.user;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.yeeun.web.util.Messenger;
-
 @RestController
 @RequestMapping("/users")
 public class UserController {
@@ -27,7 +27,7 @@ public class UserController {
 		return userService.findAll();
 	}
 	@GetMapping("/{userid}")
-	public Messenger detail(@PathVariable String userid) {
+	public User detail(@PathVariable String userid) {
 		return userService.findOne(userid);
 	}
 	@PutMapping("/{useid}")
